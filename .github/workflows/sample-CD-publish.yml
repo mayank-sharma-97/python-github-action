@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  IMAGE_NAME: sample-CI/CD-fastapi
+  IMAGE_NAME: sample-ci-cd-fastapi
 
 jobs:
   test:
