@@ -1,10 +1,11 @@
 FROM python:latest
 
 WORKDIR /app
-COPY .. app/
+COPY . .
 
-RUN if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
 EXPOSE 8080
 
-CMD [ "python","app.py" ]
+CMD [ "uvicorn","app:app","--reload","--port", "8080","--host","0.0.0.0" ]
