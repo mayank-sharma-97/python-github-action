@@ -1,4 +1,4 @@
-# Python-github-action
+# Python GitHub Action
 
 [![](https://img.icons8.com/color/48/000000/python.png)](https://www.python.org/)
 
