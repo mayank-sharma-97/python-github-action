@@ -42,7 +42,7 @@ jobs:
           OWNER: '${{ github.repository_owner }}'
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/${{ github.repository_owner }}/$IMAGE_NAME
+          IMAGE_ID=docker.pkg.github.com/${{ OWNER_LC }}/$IMAGE_NAME
 
           VERSION=latest
 
