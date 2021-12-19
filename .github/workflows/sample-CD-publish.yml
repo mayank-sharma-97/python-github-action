@@ -43,7 +43,7 @@ jobs:
 
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/vinaymakam/$IMAGE_NAME
+          IMAGE_ID=docker.pkg.github.com/vinaymakam/ga
           
           VERSION=latest
 
