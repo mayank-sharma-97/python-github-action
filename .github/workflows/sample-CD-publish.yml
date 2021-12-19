@@ -39,10 +39,14 @@ jobs:
         run: |
           echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
         env:
-          OWNER: '${{ github.repository_owner }}'
+          OWNER: '${{ github.repository }}'
+
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/${{ OWNER_LC }}/$IMAGE_NAME
+          IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
+          
+          echo "IMAGE_ID_LC=${IMAGE_ID,,}" >>${GITHUB_ENV}
+          
 
           VERSION=latest
 
