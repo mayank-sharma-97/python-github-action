@@ -46,11 +46,11 @@ jobs:
           IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
           
           echo "IMAGE_ID_LC=${IMAGE_ID,,}" >>${GITHUB_ENV}
-          
+          echo IMAGE_ID=$IMAGE_ID_LC
 
           VERSION=latest
 
           echo VERSION=$VERSION
 
-          docker tag $IMAGE_NAME $IMAGE_ID_LC:$VERSION
-          docker push $IMAGE_ID_LC:$VERSION
+          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
