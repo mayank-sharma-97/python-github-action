@@ -33,17 +33,12 @@ jobs:
         run: docker build . --file build/Dockerfile --tag $IMAGE_NAME
 
       - name: Log into registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-
-      # - name: lower the Owner name
-      #   run: |
-      #     echo "github.repository =${github.repository ,,}" >>${GITHUB_ENV}
-      #   env:
-      #     OWNER: '${{ github.repository }}'
+        # run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        run: echo $PAT | docker login ghcr.io --username phanatic --password-stdin
 
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/vinaymakam/sample-ci-cd-fastapi
+          IMAGE_ID=ghcr.io/vinaymakam/sample-ci-cd-fastapi
           
           VERSION=latest
 
