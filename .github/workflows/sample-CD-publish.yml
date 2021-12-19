@@ -43,7 +43,7 @@ jobs:
 
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/vinaymakam/ga
+          IMAGE_ID=docker.pkg.github.com/vinaymakam/sample-ci-cd-fastapi
           
           VERSION=latest
 
