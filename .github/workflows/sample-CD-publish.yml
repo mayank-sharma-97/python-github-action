@@ -37,7 +37,7 @@ jobs:
 
       - name: lower the Owner name
         run: |
-          echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
+          echo "github.repository =${github.repository ,,}" >>${GITHUB_ENV}
         env:
           OWNER: '${{ github.repository }}'
 
@@ -45,9 +45,6 @@ jobs:
         run: |
           IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
           
-          echo "IMAGE_ID_LC=${IMAGE_ID,,}" >>${GITHUB_ENV}
-          echo IMAGE_ID=$IMAGE_ID_LC
-
           VERSION=latest
 
           echo VERSION=$VERSION
