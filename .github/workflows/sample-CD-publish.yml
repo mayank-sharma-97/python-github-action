@@ -43,11 +43,11 @@ jobs:
 
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/vinaymakam:ga
+          IMAGE_ID=docker.pkg.github.com/vinaymakam/ga
           
           VERSION=latest
 
           echo VERSION=$VERSION
 
-          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+          # docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
