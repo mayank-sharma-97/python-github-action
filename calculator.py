@@ -1,12 +1,28 @@
-import src.calculation as cal
+# encoding=utf-8
+# Program makes a simple calculator
+from decimal import Decimal
 
-print("------------------- Welcome to Calculator application -------------------")
+class Calculator:
 
-num1 = 10
-num2 = 20
+    @staticmethod
+    def addition(a, b):
+        return a + b
 
-print("------------------- Addition -------------------")
-print("Addition of ",num1," and ",num2," is ",cal.add(num1=num1,num2=num2))
+    @staticmethod
+    def subtraction(a, b):
+        return a - b
 
-print("------------------- Subtraction -----------------")
-print("Substraction of ",num1," and ",num2," is ",cal.sub(num1=num1,num2=num2))
+    @staticmethod
+    def multiplication(a, b):
+        return a * b
+
+    @staticmethod
+    def divide(a, b):
+        if b == 0:
+            return "Can not be divided by zero"
+        else:
+            return a / b
+
+    @staticmethod
+    def sum(*args):
+        return sum(args)
