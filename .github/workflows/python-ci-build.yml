@@ -6,11 +6,11 @@ name: Continuous Integration - Python application
 on:
   push:
     branches:
-    - master
+    - develop
 
-  # pull_request:
-    # branches:
-    # - master
+  pull_request:
+    branches:
+    - master
 
 jobs:
   build:
